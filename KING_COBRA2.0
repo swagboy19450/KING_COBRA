@@ -3,7 +3,7 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $LEGEND_REPO == "LEGENDBOT" ]]
+    if [[ $KING_COBRA_REPO == "KING_COBRA_BOT" ]]
     then
         echo "S0lORyBDT0JSQSBCT1QgSVMgTUFERSBCWSBQWVRIT04gVEhBVFMgV0hZVEhJUyBJUyBQT1dFUkZVTEwK" | base64 -d
     elif [[ $KING_COBRA_REPO == "KING_COBRA_BOT" ]]
