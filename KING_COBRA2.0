@@ -1,0 +1,48 @@
+
+
+_get_repolink () {
+    local regex
+    regex='(https?)://github.com/.+/.+'
+    if [[ $LEGEND_REPO == "LEGENDBOT" ]]
+    then
+        echo "S0lORyBDT0JSQSBCT1QgSVMgTUFERSBCWSBQWVRIT04gVEhBVFMgV0hZVEhJUyBJUyBQT1dFUkZVTEwK" | base64 -d
+    elif [[ $KING_COBRA_REPO == "KING_COBRA_BOT" ]]
+    then
+        echo "S0lORyBDT0JSQSBCT1QgSVMgTUFERSBCWSBQWVRIT04gVEhBVFMgV0hZVEhJUyBJUyBQT1dFUkZVTEwK" | base64 -d
+    elif [[ $KING_COBRA_REPO =~ $regex ]]
+    then
+        if [[ $KING_COBRA_REPO_BRANCH ]]
+        then
+            echo "${KING_COBRA_REPO}/archive/${KING_COBRA_REPO_BRANCH}.zip"
+        else
+            echo "${KING_COBRA_REPO}/archive/master.zip"
+        fi
+    else
+        echo "S0lORyBDT0JSQSBCT1QgSVMgTUFERSBCWSBQWVRIT04gVEhBVFMgV0hZVEhJUyBJUyBQT1dFUkZVTEwK" | base64 -d
+    fi
+}
+
+
+_set_bot () {
+    local zippath
+    zippath="KING_COBRA_BOT.zip"
+    echo "  Downloading king_cobra_Bot V2.O Source Code..."
+    wget -q $(_get_repolink) -O "$zippath"
+    echo "  Unpacking Data ..."
+    KING_COBRA_PATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    unzip -qq "$zippath"
+    echo "Done"
+    echo "  king_cobra_Bot V2.O Cleaning.."
+    rm -rf "$zippath"
+    sleep 5
+    cd $KING_COBRA_PATH
+    echo "    ⚜️ѕταяτιиg ѕмοοτнєѕτ ⓚιⓃ𝔾_ⓒ𝐨ⒷяＡ_乃Ø𝓣 V2.O⚜️     "
+    echo "
+    KING_COBRA_BOT
+    "
+
+    python3 ../setup/updater.py ../requirements.txt requirements.txt
+    python3 -m userbot
+}
+
+_set_bot
