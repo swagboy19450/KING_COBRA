@@ -57,6 +57,8 @@ python3 -m userbot
     - Then Click On Green Run Button.
     - Wait for a while then fill the details.
     - String will be saved in your Saved Message.
+  
+  NOTE= IF REPL.IT IS NOT ORKING SO YOU WILL USE @sSessionGeneratorBot
 
 
 <h1 align="center">TO HOST KING_COBRA LOCALLY OR ON ANY OTHER VPS CLICK BELOW</h1>
