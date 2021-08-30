@@ -57,8 +57,7 @@ python3 -m userbot
     - Then Click On Green Run Button.
     - Wait for a while then fill the details.
     - String will be saved in your Saved Message.
-  
-  NOTE= IF REPL.IT IS NOT WORKING SO YOU WILL USE @SessionGeneratorBot
+ 
 
 
 <h1 align="center">TO HOST KING_COBRA LOCALLY OR ON ANY OTHER VPS CLICK BELOW</h1>
@@ -104,6 +103,7 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
     - `APP_ID`:   You can get this value from https://my.telegram.org
     - `API_HASH`:   You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
+- IF REPL.IT FOR STRING SESSION IS NOT WORKING SO YOU WILL USE @SessionGeneratorBot
 
 
 </details>
